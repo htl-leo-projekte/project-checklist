@@ -1,4 +1,209 @@
-= Index page
+= Project Checklist
+Thomas W. Stütz
+0.7.0, {docdate} : project development on technical higher college HTL Leonding
 ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:toclevels: 5
+:experimental:
+:source-highlighter: rouge
+:docinfo: shared
+// https://mrhaki.blogspot.com/2014/06/awesome-asciidoc-use-link-attributes.html
+:linkattrs:
 
-image::img.png[]
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/quarkus-lecture-notes/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/quarkus-lecture-notes^] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+// print the toc here (not at the default position)
+toc::[]
+:experimental:
+//https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74?permalink_comment_id=3948218
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+== Dokumentation
+
+* Die Dokumentation ist in einem Markup-Dialekt zu erstellen (zB asciidoctor, markdown)
+
+* Die Grafiken sind vorzugsweise mittels https://plantuml.com/en/[plantuml^] oder einem ähnlichen textbasierten Tool/Framework zur Diagrammerstellung anzufertigen.
+
+* Als Vorlage wird das Repo https://github.com/htl-leonding-college/asciidoctor-html-template[asciidoctor-html-template^] empfohlen.
++
+Hier werden automatisch aus den adoc-Files mittels gh-actions statische Webseiten (gh-pages) erstellt.
+
+== Gesprächsprotokolle
+
+* Sämtliche Gespräche mit Lehrpersonen und/oder (externen)Auftraggebern sind mittels Ergebnisprotokoll zu dokumentieren.
+
+* Die Struktur des Protokolls soll einheitlich sein. Eine mögliche Vorlage ist https://github.com/htl-leo-projekte/project-checklist/blob/main/asciidocs/docs/minutes-of-meeting.adoc[minutes-of-meeting.adoc]
+
+* Die Benennung der Dokumente soll einem Schema entsprechen:
++
+`yyy-mm-dd_<Art des Dokuments>_<Thema des Dokuments>`.adoc
++
+zB `2025-02-24_Besprechung_Thema_XY.adoc`
+
+
+== git-Repository
+
+=== Erstellen der Repos
+
+* Projekte sollten von der jeweiligen Lehrkraft mittels gh-classroom erstellt werden.
++
+image::projekte-gh-classroom.png[]
+
+** Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.
+
+** dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.
+
+=== Struktur der Repos
+
+IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[Monorepos^].
+
+[plantuml,projekt-repo-struktur,svg]
+----
+@startsalt
+{
+{T
+ + project-root
+ ++ <color:green>asciidocs (or docs)
+ +++ <color:blue>2025-02-18_wireframes-backend
+ ++++ 01-landing-page.png
+ ++++ 02-xy.png
+ ++++ 03-...
+ +++ <color:blue>2025-02-26_datenmodell
+ ++ <color:green>backend
+ +++ <color:blue>project-backend-xy
+ ++++ ...
+ +++ <color:blue>project-backend-yz
+ ++++ ...
+ ++ <color:green>frontend
+ +++ <color:blue>project-frontend-xy
+ ++ <color:green>android
+ ++ <color:green>ios
+ ++ README.adoc
+}
+}
+@endsalt
+
+----
+
+=== README
+
+* README.adoc oder README.md
+
+* Kurze Beschreibung der Projektaufgabe
+
+* Wie kann man das Projekt in Betrieb nehmen?
+
+** Welche Voraussetzungen sind notwendig
+** Wie startet man die Software-Produkte (zB Docker-Container)
+** Wo findet man die Artefakte (meist im gh-Repo)
+
+* Projektteam
+** Minimum: Vor- und Nachnamen, Klasse und Jahrgang
+
+=== Inhalt eines git-Repos
+
+==== Was gehört in ein git-Repo?
+
+* Sämtliche Artefakte, die man selbst erstellt: zB
+
+** Programmcodes
+** Dokumentationen
+** Scripts
+
+==== Was gehört NICHT in ein git-Repo?
+
+* Sämtliche Artefakte, die generiert werden: zB
+
+* `node_modules` und `target`-Verzeichnis
+* Die IDE-Verzeichnisse wie `.idea` und `.vscode`
+* Keine Passwörter und persönliche Daten. Verwenden Sie hierzu git-secrets und dgl.
+
+
+== git Branching Strategy
+
+=== 3. Jahrgang
+
+.source: https://brntn.me/blog/git-branching-strategy-diagrams/[Brenton Cleeland: Git branching strategy diagrams]
+image::git-branching-strategy-jg3.png[]
+
+* Entwickeln der Features in Feature-Branches.
+* Der main-Branch ist immer lauffähig.
+* Die Releases sind zu taggen.
+
+=== 4. Jahrgang
+
+.source: https://www.pablogonzalez.io/salesforce-git-branching-strategies/[Design Patterns for Salesforce Git Branching Strategies^]
+image::git-branching-strategy-jg4.png[]
+
+* Der main-Branch enthät nur mehr die Releases.
+* Jeder Release wird getagged.
+* Der develop-Branch ist immer lauffähig.
+
+== Planung und Dokumentation der Programmierarbeiten
+
+=== User Stories und Tasks
+
+* Das Scrum-Board sowie das Repo sind zu "verbinden", dh sämtliche Commits eines Tasks werden im Scrum-Board angezeigt.
+
+* Für sämtliche Arbeiten sind Tasks (und die dazugehörigen User Stories) zu erstellen
+** Für jeden Commit ist in der Commit-Message die dazugehörige Task-Id einzutragen.
+
+.Tasks und Commit-Messages
+[%collapsible]
+====
+image::youtrack-task.png[]
+
+image::youtrack-task-commit.png[]
+====
+
+
+=== Releases
+
+* Wird eine Version deployed, ist ein entsprechender Release zu dokumentieren:
+
+image::github-repo.png[]
+
+image::github-release.png[]
+
+* Die Änderungen werden automatisch eingetragen, daher sind aussagekräftige Commit-Messages essentiell.
+
+
+image::github-package.png[]
+
+
+
+== Weitere Aspekte im Projektablauf
+
+=== Security
+
+* In einem ersten Schritt wird auf die Security verzichtet, die Funktionalität steht im Vordergrund.
+
+* Beispiel: Nicht bereits am Anfang Zeit mit Login-Screens verschwenden.
+
+IMPORTANT: Beim ersten Deployment auf einem Server oder in der Leocloud sind allerdings Schutzmaßnahmen zu ergreifen.
+
+
+=== Backups
+
+* Für Auftragsarbeiten ist auch zu überlegen und vorzuschlagen, wie für die Datenbank(en) Backups erstellt werden können.
+
+
+
+
