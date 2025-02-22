@@ -1,6 +1,6 @@
 = Project Checklist
 Thomas W. Stütz
-0.7.0, {docdate} : project development on technical higher college HTL Leonding
+1.0.0, {docdate} : project development on technical higher college HTL Leonding
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -44,6 +44,8 @@ endif::[]
 * Als Vorlage wird das Repo https://github.com/htl-leonding-college/asciidoctor-html-template[asciidoctor-html-template^] empfohlen.
 +
 Hier werden automatisch aus den adoc-Files mittels gh-actions statische Webseiten (gh-pages) erstellt.
+
+
 
 == Gesprächsprotokolle
 
@@ -135,6 +137,27 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 * Die IDE-Verzeichnisse wie `.idea` und `.vscode`
 * Keine Passwörter und persönliche Daten. Verwenden Sie hierzu git-secrets und dgl.
 
+=== Commit-Messages
+
+* Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits -A specification for adding human and machine readable meaning to commit messages^]
+
+
+== gh-Pages
+
+* Der Link zu den gh-Pages ist immer unter `About` einzutragen
+
+image::link-to-gh-pages.png[]
+
+
+.Konfiguration der gh-pages
+[%collapsible]
+====
+image::configuration-gh-pages.png[]
+====
+
+
+
+
 
 == git Branching Strategy
 
@@ -187,7 +210,9 @@ image::github-release.png[]
 
 image::github-package.png[]
 
+== Deployment
 
+* Die Deployments sind grundsätzlich zu automatisieren (scripts und/oder gh-actions)
 
 == Weitere Aspekte im Projektablauf
 
