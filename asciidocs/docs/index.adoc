@@ -18,8 +18,10 @@ ifndef::imagesdir[:imagesdir: images]
 ifdef::backend-html5[]
 
 // https://fontawesome.com/v4.7.0/icons/
+////
 icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/quarkus-lecture-notes/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
-icon:github-square[link=https://github.com/htl-leonding-college/quarkus-lecture-notes^] ‏ ‏ ‎
+////
+icon:github-square[link=https://github.com/htl-leo-projekte/project-checklist^] ‏ ‏ ‎
 icon:home[link=https://htl-leonding.github.io/]
 endif::backend-html5[]
 
@@ -70,7 +72,7 @@ image::projekte-gh-classroom.png[]
 
 ** Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.
 
-** dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.
+** Dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.
 
 === Struktur der Repos
 
@@ -142,7 +144,7 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 * Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits -A specification for adding human and machine readable meaning to commit messages^]
 
 
-== gh-Pages
+=== gh-Pages
 
 * Der Link zu den gh-Pages ist immer unter `About` einzutragen
 
