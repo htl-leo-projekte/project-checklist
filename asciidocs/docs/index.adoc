@@ -229,6 +229,11 @@ IMPORTANT: Beim ersten Deployment auf einem Server oder in der Leocloud sind all
 
 * Für Auftragsarbeiten ist auch zu überlegen und vorzuschlagen, wie für die Datenbank(en) Backups erstellt werden können.
 
+=== Versionierung der Datenbanken
+
+* Bei Anwendung von Scrum entwickelt sich die Applikation in Etappen (Sprints). Dadurch kann sich auch die Datenbankstruktur (oft) ändern.
+
+* Es wird daher empfohlen, ein Datenbankversionierungstool wie https://quarkus.io/guides/flyway[*Flyway*^] oder https://quarkus.io/guides/liquibase[*Liquibase*^]  zu verwenden.
 
 
 
