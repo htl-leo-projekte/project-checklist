@@ -83,7 +83,7 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 @startsalt
 {
 {T
- + project-root
+ + <project-root>
  ++ <color:green>asciidocs (or docs)
  +++ <color:blue>2025-02-18_wireframes-backend
  ++++ 01-landing-page.png
@@ -101,12 +101,32 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
  +++ <color:blue>project-frontend-xy
  ++ <color:green>android
  ++ <color:green>ios
+ ++ <color:green>compose
+ ++ <color:green>k8s
  ++ README.adoc
 }
 }
 @endsalt
-
 ----
+
+
+|===
+|folder |content  |Bsp
+
+|frontend
+|spa + docker-files
+|https://github.com/caberger/keycloak/tree/master/frontend[C.Aberger - Keycloak^]
+
+|compose
+|Konfiguration für docker-compose
+|https://github.com/caberger/keycloak/tree/master/compose[C.Aberger - Keycloak^]
+
+|k8s
+|Konfiguration für kubernetes
+|https://github.com/caberger/keycloak/tree/master/k8s[C.Aberger - Keycloak^]
+|===
+
+
 
 === README
 
