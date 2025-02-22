@@ -21,7 +21,7 @@ ifdef::backend-html5[]
 ////
 icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/quarkus-lecture-notes/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
 ////
-icon:github-square[link=https://github.com/htl-leo-projekte/project-checklist^] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leo-projekte/project-checklist] ‏ ‏ ‎
 icon:home[link=https://htl-leonding.github.io/]
 endif::backend-html5[]
 
@@ -91,6 +91,8 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
  ++++ 03-...
  +++ <color:blue>2025-02-26_datenmodell
  ++ <color:green>backend
+ +++ <color:blue>api
+ ++++ requests.http
  +++ <color:blue>project-backend-xy
  ++++ ...
  +++ <color:blue>project-backend-yz
