@@ -486,6 +486,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_security">8.1. Security</a></li>
 <li><a href="#_backups">8.2. Backups</a></li>
+<li><a href="#_versionierung_der_datenbanken">8.3. Versionierung der Datenbanken</a></li>
 </ul>
 </li>
 </ul>
@@ -889,13 +890,26 @@ Beim ersten Deployment auf einem Server oder in der Leocloud sind allerdings Sch
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_versionierung_der_datenbanken"><a class="anchor" href="#_versionierung_der_datenbanken"></a>8.3. Versionierung der Datenbanken</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Bei Anwendung von Scrum entwickelt sich die Applikation in Etappen (Sprints). Dadurch kann sich auch die Datenbankstruktur (oft) ändern.</p>
+</li>
+<li>
+<p>Es wird daher empfohlen, ein Datenbankversionierungstool wie <a href="https://quarkus.io/guides/flyway" target="_blank" rel="noopener"><strong>Flyway</strong></a> oder <a href="https://quarkus.io/guides/liquibase" target="_blank" rel="noopener"><strong>Liquibase</strong></a>  zu verwenden.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 1.0.0<br>
-Last updated 2025-02-22 17:22:13 UTC
+Last updated 2025-02-22 17:30:06 UTC
 </div>
 </div>
 </body>
