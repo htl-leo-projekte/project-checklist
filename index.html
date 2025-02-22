@@ -450,7 +450,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Project Checklist</h1>
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
-<span id="revnumber">version 0.7.0,</span>
+<span id="revnumber">version 1.0.0,</span>
 <span id="revdate">2025-02-22</span>
 <br><span id="revremark">project development on technical higher college HTL Leonding</span>
 </div>
@@ -465,24 +465,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_struktur_der_repos">3.2. Struktur der Repos</a></li>
 <li><a href="#_readme">3.3. README</a></li>
 <li><a href="#_inhalt_eines_git_repos">3.4. Inhalt eines git-Repos</a></li>
+<li><a href="#_commit_messages">3.5. Commit-Messages</a></li>
 </ul>
 </li>
-<li><a href="#_git_branching_strategy">4. git Branching Strategy</a>
+<li><a href="#_gh_pages">4. gh-Pages</a></li>
+<li><a href="#_git_branching_strategy">5. git Branching Strategy</a>
 <ul class="sectlevel2">
-<li><a href="#_3_jahrgang">4.1. 3. Jahrgang</a></li>
-<li><a href="#_4_jahrgang">4.2. 4. Jahrgang</a></li>
+<li><a href="#_3_jahrgang">5.1. 3. Jahrgang</a></li>
+<li><a href="#_4_jahrgang">5.2. 4. Jahrgang</a></li>
 </ul>
 </li>
-<li><a href="#_planung_und_dokumentation_der_programmierarbeiten">5. Planung und Dokumentation der Programmierarbeiten</a>
+<li><a href="#_planung_und_dokumentation_der_programmierarbeiten">6. Planung und Dokumentation der Programmierarbeiten</a>
 <ul class="sectlevel2">
-<li><a href="#_user_stories_und_tasks">5.1. User Stories und Tasks</a></li>
-<li><a href="#_releases">5.2. Releases</a></li>
+<li><a href="#_user_stories_und_tasks">6.1. User Stories und Tasks</a></li>
+<li><a href="#_releases">6.2. Releases</a></li>
 </ul>
 </li>
-<li><a href="#_weitere_aspekte_im_projektablauf">6. Weitere Aspekte im Projektablauf</a>
+<li><a href="#_deployment">7. Deployment</a></li>
+<li><a href="#_weitere_aspekte_im_projektablauf">8. Weitere Aspekte im Projektablauf</a>
 <ul class="sectlevel2">
-<li><a href="#_security">6.1. Security</a></li>
-<li><a href="#_backups">6.2. Backups</a></li>
+<li><a href="#_security">8.1. Security</a></li>
+<li><a href="#_backups">8.2. Backups</a></li>
 </ul>
 </li>
 </ul>
@@ -676,13 +679,50 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_commit_messages"><a class="anchor" href="#_commit_messages"></a>3.5. Commit-Messages</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener">Conventional Commits -A specification for adding human and machine readable meaning to commit messages</a></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_git_branching_strategy"><a class="anchor" href="#_git_branching_strategy"></a>4. git Branching Strategy</h2>
+<h2 id="_gh_pages"><a class="anchor" href="#_gh_pages"></a>4. gh-Pages</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Der Link zu den gh-Pages ist immer unter <code>About</code> einzutragen</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/link-to-gh-pages.png" alt="link to gh pages">
+</div>
+</div>
+<details>
+<summary class="title">Konfiguration der gh-pages</summary>
+<div class="content">
+<div class="imageblock">
+<div class="content">
+<img src="images/configuration-gh-pages.png" alt="configuration gh pages">
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_git_branching_strategy"><a class="anchor" href="#_git_branching_strategy"></a>5. git Branching Strategy</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_3_jahrgang"><a class="anchor" href="#_3_jahrgang"></a>4.1. 3. Jahrgang</h3>
+<h3 id="_3_jahrgang"><a class="anchor" href="#_3_jahrgang"></a>5.1. 3. Jahrgang</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/git-branching-strategy-jg3.png" alt="git branching strategy jg3">
@@ -704,7 +744,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 </div>
 <div class="sect2">
-<h3 id="_4_jahrgang"><a class="anchor" href="#_4_jahrgang"></a>4.2. 4. Jahrgang</h3>
+<h3 id="_4_jahrgang"><a class="anchor" href="#_4_jahrgang"></a>5.2. 4. Jahrgang</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/git-branching-strategy-jg4.png" alt="git branching strategy jg4">
@@ -728,10 +768,10 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 </div>
 <div class="sect1">
-<h2 id="_planung_und_dokumentation_der_programmierarbeiten"><a class="anchor" href="#_planung_und_dokumentation_der_programmierarbeiten"></a>5. Planung und Dokumentation der Programmierarbeiten</h2>
+<h2 id="_planung_und_dokumentation_der_programmierarbeiten"><a class="anchor" href="#_planung_und_dokumentation_der_programmierarbeiten"></a>6. Planung und Dokumentation der Programmierarbeiten</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_user_stories_und_tasks"><a class="anchor" href="#_user_stories_und_tasks"></a>5.1. User Stories und Tasks</h3>
+<h3 id="_user_stories_und_tasks"><a class="anchor" href="#_user_stories_und_tasks"></a>6.1. User Stories und Tasks</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -766,7 +806,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </details>
 </div>
 <div class="sect2">
-<h3 id="_releases"><a class="anchor" href="#_releases"></a>5.2. Releases</h3>
+<h3 id="_releases"><a class="anchor" href="#_releases"></a>6.2. Releases</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -800,10 +840,22 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 </div>
 <div class="sect1">
-<h2 id="_weitere_aspekte_im_projektablauf"><a class="anchor" href="#_weitere_aspekte_im_projektablauf"></a>6. Weitere Aspekte im Projektablauf</h2>
+<h2 id="_deployment"><a class="anchor" href="#_deployment"></a>7. Deployment</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Die Deployments sind grundsätzlich zu automatisieren (scripts und/oder gh-actions)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_weitere_aspekte_im_projektablauf"><a class="anchor" href="#_weitere_aspekte_im_projektablauf"></a>8. Weitere Aspekte im Projektablauf</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_security"><a class="anchor" href="#_security"></a>6.1. Security</h3>
+<h3 id="_security"><a class="anchor" href="#_security"></a>8.1. Security</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -828,7 +880,7 @@ Beim ersten Deployment auf einem Server oder in der Leocloud sind allerdings Sch
 </div>
 </div>
 <div class="sect2">
-<h3 id="_backups"><a class="anchor" href="#_backups"></a>6.2. Backups</h3>
+<h3 id="_backups"><a class="anchor" href="#_backups"></a>8.2. Backups</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -842,8 +894,8 @@ Beim ersten Deployment auf einem Server oder in der Leocloud sind allerdings Sch
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 0.7.0<br>
-Last updated 2025-02-22 14:14:41 UTC
+Version 1.0.0<br>
+Last updated 2025-02-22 17:22:13 UTC
 </div>
 </div>
 </body>
