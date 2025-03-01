@@ -1,6 +1,6 @@
 = Project Checklist
 Thomas W. Stütz
-1.0.0, {docdate} : project development on technical higher college HTL Leonding
+2.0.0, {docdate} : project development on technical higher college HTL Leonding
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -37,7 +37,20 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
+== Allgemeines
+
+* Bezeichner sind in Kleinbuchstaben zu schreiben (lower case).
+** Dafür gibt es viele Gründe, zB
++
+image::lowercase.png[]
+
+** Besonders bei Großbuchstaben in einem Repository-Namen können Probleme auftreten - auch beim Deployment in die LeoCloud
+
+** jedoch: Ausnahmen bestätigen die Regel
+
 == Dokumentation
+
+=== Form der Dokumentation
 
 * Die Dokumentation ist in einem Markup-Dialekt zu erstellen (zB asciidoctor, markdown)
 
@@ -49,7 +62,32 @@ Hier werden automatisch aus den adoc-Files mittels gh-actions statische Webseite
 
 
 
-== Gesprächsprotokolle
+
+
+=== Inhalte der Dokumentation
+
+Wie bereits im Abschnitt _README erwähnt, besteht eine Dokumentation aus folgenden Teilen:
+
+==== Dokumentation des bestehenden Systems (Legacy System, Istzustand)
+
+* Datenmodell
+* Schnittstellen
+
+==== Dokumentation des zu erstellenden Systems (Sollzustand)
+
+* Datenmodell
+* Schnittstellen zwischen Komponenten
+* Schnittstellen nach außen
+* ev. Wireframes und/oder Screenshots
+* Benutzerhandbuch (falls notwendig)
+* Installationshandbuch
+** Installation/Deployment des Systems
+** Starten des Systems
+** Backup des Systems
+
+==== Besprechungsprotokolle (Minutes-of-Meeting)
+
+Ergebnisprotokolle keine Gesprächsverlaufsprotokolle
 
 * Sämtliche Gespräche mit Lehrpersonen und/oder (externen)Auftraggebern sind mittels Ergebnisprotokoll zu dokumentieren.
 
@@ -61,18 +99,19 @@ Hier werden automatisch aus den adoc-Files mittels gh-actions statische Webseite
 +
 zB `2025-02-24_Besprechung_Thema_XY.adoc`
 
+* siehe auch https://2324-4bhif-syp.github.io/2324-4bhif-syp-project-franklyn/[Franklyn 3^]
 
-== git-Repository
 
-=== Erstellen der Repos
+==== Statusberichte
 
-* Projekte sollten von der jeweiligen Lehrkraft mittels gh-classroom erstellt werden.
-+
-image::projekte-gh-classroom.png[]
+==== Foliensätze (RevealJS-slides)
 
-** Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.
 
-** Dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.
+Bsp: https://2324-4bhif-syp.github.io/2324-4bhif-syp-project-franklyn/[Projekt Franklyn 3^]
+
+==== Sonstiges
+
+== git-Repositories
 
 === Struktur der Repos
 
@@ -91,7 +130,7 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
  ++++ 03-...
  +++ <color:blue>2025-02-26_datenmodell
  ++ <color:green>backend
- +++ <color:blue>api
+ +++ <color:blue>http-requests
  ++++ requests.http
  +++ <color:blue>project-backend-xy
  ++++ ...
@@ -102,6 +141,8 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
  ++ <color:green>android
  ++ <color:green>ios
  ++ <color:green>compose
+ +++ <color:blue>keycloak
+ +++ <color:blue>postgres
  ++ <color:green>k8s
  ++ README.adoc
 }
@@ -118,7 +159,7 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 |https://github.com/caberger/keycloak/tree/master/frontend[C.Aberger - Keycloak^]
 
 |compose
-|Konfiguration für docker-compose
+|Konfiguration für docker-compose, Dockerfiles für zB keycloak, postgres, ...
 |https://github.com/caberger/keycloak/tree/master/compose[C.Aberger - Keycloak^]
 
 |k8s
@@ -133,6 +174,8 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 * README.adoc oder README.md
 
 * Kurze Beschreibung der Projektaufgabe
+** ev. User Stories oder Use-Case-Diagram
+** ev. Klassendiagramm und/oder ERD
 
 * Wie kann man das Projekt in Betrieb nehmen?
 
@@ -140,8 +183,18 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 ** Wie startet man die Software-Produkte (zB Docker-Container)
 ** Wo findet man die Artefakte (meist im gh-Repo)
 
+** Link zum scrum-board (zB youtrack)
+
+** ev. Link zu den Folien
+
 * Projektteam
 ** Minimum: Vor- und Nachnamen, Klasse und Jahrgang
+
+* Beispiele:
+** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-leovote/tree/main?tab=readme-ov-file[Projekt LeoVote^]
+** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-iot-dashboard[Projekt IoT 2023-25^]
+** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-franklyn?tab=readme-ov-file[Projekt Franklyn 3^]
+** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine/tree/develop[Projekt Kurstermine^]
 
 === Inhalt eines git-Repos
 
@@ -152,6 +205,7 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 ** Programmcodes
 ** Dokumentationen
 ** Scripts
+** Struktur eines `.env`-Files mit Dummy-Konfigurationsdaten
 
 ==== Was gehört NICHT in ein git-Repo?
 
@@ -160,10 +214,30 @@ IMPORTANT: Wir verwenden grundsätzlich https://en.wikipedia.org/wiki/Monorepo[M
 * `node_modules` und `target`-Verzeichnis
 * Die IDE-Verzeichnisse wie `.idea` und `.vscode`
 * Keine Passwörter und persönliche Daten. Verwenden Sie hierzu git-secrets und dgl.
+* `.env`-Files mit vertraulichen Konfigurationsdaten
 
 === Commit-Messages
 
-* Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits -A specification for adding human and machine readable meaning to commit messages^]
+* Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB
+** https://www.conventionalcommits.org/en/v1.0.0/[Conventional Commits -A specification for adding human and machine readable meaning to commit messages^]
+** https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type[Guidelines for Angular]
+** https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages[How to Write Better Git Commit Messages – A Step-By-Step Guide^]
+
+.Types of Commit-Messages
+
+* *feat* – a new feature is introduced with the changes
+* *fix* – a bug fix has occurred
+* *chore* – changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies). Often *bump* is used for updating a version.
+* *refactor* – refactored code that neither fixes a bug nor adds a feature
+* *docs* – updates to documentation such as a the README or other markdown files
+* *style* – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.
+* *test* – including new or correcting previous tests
+* *perf* – performance improvements
+* *ci* – continuous integration related
+* *build* – changes that affect the build system or external dependencies
+* *revert* – reverts a previous commit
+
+
 
 
 === gh-Pages
@@ -202,8 +276,11 @@ image::git-branching-strategy-jg4.png[]
 * Der main-Branch enthät nur mehr die Releases.
 * Jeder Release wird getagged.
 * Der develop-Branch ist immer lauffähig.
+* In diesem https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine/tree/develop[Projekt^] sieht man die Verwendung des develop-Branches
 
 == Planung und Dokumentation der Programmierarbeiten
+
+IMPORTANT: Im Rahmen des Projektunterrichts wird versucht nicht einfach drauf los zu coden, sondern zuerst Tasks in einem Scrum Board zu erstellen und diese dann abzuarbeiten. Für jeden Task soll dann ersichtlich sein, welche Commits zu dessen Erfüllung geführt haben
 
 === User Stories und Tasks
 
@@ -229,7 +306,7 @@ image::github-repo.png[]
 
 image::github-release.png[]
 
-* Die Änderungen werden automatisch eingetragen, daher sind aussagekräftige Commit-Messages essentiell.
+* Die Änderungen werden automatisch eingetragen, daher sind aussagekräftige Commit-Messages essenziell.
 
 
 image::github-package.png[]
@@ -237,6 +314,10 @@ image::github-package.png[]
 == Deployment
 
 * Die Deployments sind grundsätzlich zu automatisieren (scripts und/oder gh-actions)
+
+** Beispiele:
+*** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine[^]
+*** https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-franklyn[^]
 
 == Weitere Aspekte im Projektablauf
 
@@ -259,5 +340,23 @@ IMPORTANT: Beim ersten Deployment auf einem Server oder in der Leocloud sind all
 
 * Es wird daher empfohlen, ein Datenbankversionierungstool wie https://quarkus.io/guides/flyway[*Flyway*^] oder https://quarkus.io/guides/liquibase[*Liquibase*^]  zu verwenden.
 
+== Für Lehrkräfte: git-Classroom
 
+=== Erstellen der Repos
 
+* Projekte sollten von der jeweiligen Lehrkraft mittels gh-classroom erstellt werden.
++
+image::projekte-gh-classroom.png[]
+
+** Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.
+
+** Dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.
+
+=== Virtuelle Maschinen
+
+* Möglichkeiten
+** oravm
+** vm vom sysadmin
+** leocloud (mandatorisch, spätestens ab 4.jg, 2.Semester)
+
+IMORTANT: Vor der Matura die Credentials einsammeln und aufbewahren.
