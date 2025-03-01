@@ -450,23 +450,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Project Checklist</h1>
 <div class="details">
 <span id="author" class="author">Thomas W. Stütz</span><br>
-<span id="revnumber">version 1.0.0,</span>
-<span id="revdate">2025-02-22</span>
+<span id="revnumber">version 2.0.0,</span>
+<span id="revdate">2025-03-01</span>
 <br><span id="revremark">project development on technical higher college HTL Leonding</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_dokumentation">1. Dokumentation</a></li>
-<li><a href="#_gesprächsprotokolle">2. Gesprächsprotokolle</a></li>
-<li><a href="#_git_repository">3. git-Repository</a>
+<li><a href="#_allgemeines">1. Allgemeines</a></li>
+<li><a href="#_dokumentation">2. Dokumentation</a>
 <ul class="sectlevel2">
-<li><a href="#_erstellen_der_repos">3.1. Erstellen der Repos</a></li>
-<li><a href="#_struktur_der_repos">3.2. Struktur der Repos</a></li>
-<li><a href="#_readme">3.3. README</a></li>
-<li><a href="#_inhalt_eines_git_repos">3.4. Inhalt eines git-Repos</a></li>
-<li><a href="#_commit_messages">3.5. Commit-Messages</a></li>
-<li><a href="#_gh_pages">3.6. gh-Pages</a></li>
+<li><a href="#_form_der_dokumentation">2.1. Form der Dokumentation</a></li>
+<li><a href="#_inhalte_der_dokumentation">2.2. Inhalte der Dokumentation</a></li>
+</ul>
+</li>
+<li><a href="#_git_repositories">3. git-Repositories</a>
+<ul class="sectlevel2">
+<li><a href="#_struktur_der_repos">3.1. Struktur der Repos</a></li>
+<li><a href="#_readme">3.2. README</a></li>
+<li><a href="#_inhalt_eines_git_repos">3.3. Inhalt eines git-Repos</a></li>
+<li><a href="#_commit_messages">3.4. Commit-Messages</a></li>
+<li><a href="#_gh_pages">3.5. gh-Pages</a></li>
 </ul>
 </li>
 <li><a href="#_git_branching_strategy">4. git Branching Strategy</a>
@@ -489,6 +493,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_versionierung_der_datenbanken">7.3. Versionierung der Datenbanken</a></li>
 </ul>
 </li>
+<li><a href="#_für_lehrkräfte_git_classroom">8. Für Lehrkräfte: git-Classroom</a>
+<ul class="sectlevel2">
+<li><a href="#_erstellen_der_repos">8.1. Erstellen der Repos</a></li>
+<li><a href="#_virtuelle_maschinen">8.2. Virtuelle Maschinen</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -503,8 +513,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_dokumentation"><a class="anchor" href="#_dokumentation"></a>1. Dokumentation</h2>
+<h2 id="_allgemeines"><a class="anchor" href="#_allgemeines"></a>1. Allgemeines</h2>
 <div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Bezeichner sind in Kleinbuchstaben zu schreiben (lower case).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Dafür gibt es viele Gründe, zB</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/lowercase.png" alt="lowercase">
+</div>
+</div>
+</li>
+<li>
+<p>Besonders bei Großbuchstaben in einem Repository-Namen können Probleme auftreten - auch beim Deployment in die LeoCloud</p>
+</li>
+<li>
+<p>jedoch: Ausnahmen bestätigen die Regel</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dokumentation"><a class="anchor" href="#_dokumentation"></a>2. Dokumentation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_form_der_dokumentation"><a class="anchor" href="#_form_der_dokumentation"></a>2.1. Form der Dokumentation</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -522,10 +564,67 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_inhalte_der_dokumentation"><a class="anchor" href="#_inhalte_der_dokumentation"></a>2.2. Inhalte der Dokumentation</h3>
+<div class="paragraph">
+<p>Wie bereits im Abschnitt _README erwähnt, besteht eine Dokumentation aus folgenden Teilen:</p>
 </div>
-<div class="sect1">
-<h2 id="_gesprächsprotokolle"><a class="anchor" href="#_gesprächsprotokolle"></a>2. Gesprächsprotokolle</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_dokumentation_des_bestehenden_systems_legacy_system_istzustand"><a class="anchor" href="#_dokumentation_des_bestehenden_systems_legacy_system_istzustand"></a>2.2.1. Dokumentation des bestehenden Systems (Legacy System, Istzustand)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Datenmodell</p>
+</li>
+<li>
+<p>Schnittstellen</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dokumentation_des_zu_erstellenden_systems_sollzustand"><a class="anchor" href="#_dokumentation_des_zu_erstellenden_systems_sollzustand"></a>2.2.2. Dokumentation des zu erstellenden Systems (Sollzustand)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Datenmodell</p>
+</li>
+<li>
+<p>Schnittstellen zwischen Komponenten</p>
+</li>
+<li>
+<p>Schnittstellen nach außen</p>
+</li>
+<li>
+<p>ev. Wireframes und/oder Screenshots</p>
+</li>
+<li>
+<p>Benutzerhandbuch (falls notwendig)</p>
+</li>
+<li>
+<p>Installationshandbuch</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Installation/Deployment des Systems</p>
+</li>
+<li>
+<p>Starten des Systems</p>
+</li>
+<li>
+<p>Backup des Systems</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_besprechungsprotokolle_minutes_of_meeting"><a class="anchor" href="#_besprechungsprotokolle_minutes_of_meeting"></a>2.2.3. Besprechungsprotokolle (Minutes-of-Meeting)</h4>
+<div class="paragraph">
+<p>Ergebnisprotokolle keine Gesprächsverlaufsprotokolle</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -543,40 +642,34 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>zB <code>2025-02-24_Besprechung_Thema_XY.adoc</code></p>
 </div>
 </li>
+<li>
+<p>siehe auch <a href="https://2324-4bhif-syp.github.io/2324-4bhif-syp-project-franklyn/" target="_blank" rel="noopener">Franklyn 3</a></p>
+</li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statusberichte"><a class="anchor" href="#_statusberichte"></a>2.2.4. Statusberichte</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_foliensätze_revealjs_slides"><a class="anchor" href="#_foliensätze_revealjs_slides"></a>2.2.5. Foliensätze (RevealJS-slides)</h4>
+<div class="paragraph">
+<p>Bsp: <a href="https://2324-4bhif-syp.github.io/2324-4bhif-syp-project-franklyn/" target="_blank" rel="noopener">Projekt Franklyn 3</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sonstiges"><a class="anchor" href="#_sonstiges"></a>2.2.6. Sonstiges</h4>
+
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_git_repository"><a class="anchor" href="#_git_repository"></a>3. git-Repository</h2>
+<h2 id="_git_repositories"><a class="anchor" href="#_git_repositories"></a>3. git-Repositories</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_erstellen_der_repos"><a class="anchor" href="#_erstellen_der_repos"></a>3.1. Erstellen der Repos</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Projekte sollten von der jeweiligen Lehrkraft mittels gh-classroom erstellt werden.</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/projekte-gh-classroom.png" alt="projekte gh classroom">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.</p>
-</li>
-<li>
-<p>Dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_struktur_der_repos"><a class="anchor" href="#_struktur_der_repos"></a>3.2. Struktur der Repos</h3>
+<h3 id="_struktur_der_repos"><a class="anchor" href="#_struktur_der_repos"></a>3.1. Struktur der Repos</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -591,7 +684,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/projekt-repo-struktur.svg" alt="projekt repo struktur" width="247" height="305">
+<img src="images/projekt-repo-struktur.svg" alt="projekt repo struktur" width="247" height="332">
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -615,7 +708,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">compose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Konfiguration für docker-compose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konfiguration für docker-compose, Dockerfiles für zB keycloak, postgres, &#8230;&#8203;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/caberger/keycloak/tree/master/compose" target="_blank" rel="noopener">C.Aberger - Keycloak</a></p></td>
 </tr>
 <tr>
@@ -627,7 +720,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </table>
 </div>
 <div class="sect2">
-<h3 id="_readme"><a class="anchor" href="#_readme"></a>3.3. README</h3>
+<h3 id="_readme"><a class="anchor" href="#_readme"></a>3.2. README</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -635,6 +728,16 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </li>
 <li>
 <p>Kurze Beschreibung der Projektaufgabe</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ev. User Stories oder Use-Case-Diagram</p>
+</li>
+<li>
+<p>ev. Klassendiagramm und/oder ERD</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Wie kann man das Projekt in Betrieb nehmen?</p>
@@ -649,6 +752,12 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <li>
 <p>Wo findet man die Artefakte (meist im gh-Repo)</p>
 </li>
+<li>
+<p>Link zum scrum-board (zB youtrack)</p>
+</li>
+<li>
+<p>ev. Link zu den Folien</p>
+</li>
 </ul>
 </div>
 </li>
@@ -662,13 +771,32 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </ul>
 </div>
 </li>
+<li>
+<p>Beispiele:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-leovote/tree/main?tab=readme-ov-file" target="_blank" rel="noopener">Projekt LeoVote</a></p>
+</li>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-iot-dashboard" target="_blank" rel="noopener">Projekt IoT 2023-25</a></p>
+</li>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-franklyn?tab=readme-ov-file" target="_blank" rel="noopener">Projekt Franklyn 3</a></p>
+</li>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine/tree/develop" target="_blank" rel="noopener">Projekt Kurstermine</a></p>
+</li>
+</ul>
+</div>
+</li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_inhalt_eines_git_repos"><a class="anchor" href="#_inhalt_eines_git_repos"></a>3.4. Inhalt eines git-Repos</h3>
+<h3 id="_inhalt_eines_git_repos"><a class="anchor" href="#_inhalt_eines_git_repos"></a>3.3. Inhalt eines git-Repos</h3>
 <div class="sect3">
-<h4 id="_was_gehört_in_ein_git_repo"><a class="anchor" href="#_was_gehört_in_ein_git_repo"></a>3.4.1. Was gehört in ein git-Repo?</h4>
+<h4 id="_was_gehört_in_ein_git_repo"><a class="anchor" href="#_was_gehört_in_ein_git_repo"></a>3.3.1. Was gehört in ein git-Repo?</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -684,6 +812,9 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <li>
 <p>Scripts</p>
 </li>
+<li>
+<p>Struktur eines <code>.env</code>-Files mit Dummy-Konfigurationsdaten</p>
+</li>
 </ul>
 </div>
 </li>
@@ -691,7 +822,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 </div>
 </div>
 <div class="sect3">
-<h4 id="_was_gehört_nicht_in_ein_git_repo"><a class="anchor" href="#_was_gehört_nicht_in_ein_git_repo"></a>3.4.2. Was gehört NICHT in ein git-Repo?</h4>
+<h4 id="_was_gehört_nicht_in_ein_git_repo"><a class="anchor" href="#_was_gehört_nicht_in_ein_git_repo"></a>3.3.2. Was gehört NICHT in ein git-Repo?</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -706,22 +837,76 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <li>
 <p>Keine Passwörter und persönliche Daten. Verwenden Sie hierzu git-secrets und dgl.</p>
 </li>
+<li>
+<p><code>.env</code>-Files mit vertraulichen Konfigurationsdaten</p>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_commit_messages"><a class="anchor" href="#_commit_messages"></a>3.5. Commit-Messages</h3>
+<h3 id="_commit_messages"><a class="anchor" href="#_commit_messages"></a>3.4. Commit-Messages</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener">Conventional Commits -A specification for adding human and machine readable meaning to commit messages</a></p>
+<p>Die Commit-Messages sind aussagekräftig zu gestalten: siehe zB</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener">Conventional Commits -A specification for adding human and machine readable meaning to commit messages</a></p>
+</li>
+<li>
+<p><a href="https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type">Guidelines for Angular</a></p>
+</li>
+<li>
+<p><a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages" target="_blank" rel="noopener">How to Write Better Git Commit Messages – A Step-By-Step Guide</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Types of Commit-Messages</div>
+<ul>
+<li>
+<p><strong>feat</strong> – a new feature is introduced with the changes</p>
+</li>
+<li>
+<p><strong>fix</strong> – a bug fix has occurred</p>
+</li>
+<li>
+<p><strong>chore</strong> – changes that do not relate to a fix or feature and don&#8217;t modify src or test files (for example updating dependencies). Often <strong>bump</strong> is used for updating a version.</p>
+</li>
+<li>
+<p><strong>refactor</strong> – refactored code that neither fixes a bug nor adds a feature</p>
+</li>
+<li>
+<p><strong>docs</strong> – updates to documentation such as a the README or other markdown files</p>
+</li>
+<li>
+<p><strong>style</strong> – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.</p>
+</li>
+<li>
+<p><strong>test</strong> – including new or correcting previous tests</p>
+</li>
+<li>
+<p><strong>perf</strong> – performance improvements</p>
+</li>
+<li>
+<p><strong>ci</strong> – continuous integration related</p>
+</li>
+<li>
+<p><strong>build</strong> – changes that affect the build system or external dependencies</p>
+</li>
+<li>
+<p><strong>revert</strong> – reverts a previous commit</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_gh_pages"><a class="anchor" href="#_gh_pages"></a>3.6. gh-Pages</h3>
+<h3 id="_gh_pages"><a class="anchor" href="#_gh_pages"></a>3.5. gh-Pages</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -791,6 +976,9 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <li>
 <p>Der develop-Branch ist immer lauffähig.</p>
 </li>
+<li>
+<p>In diesem <a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine/tree/develop" target="_blank" rel="noopener">Projekt</a> sieht man die Verwendung des develop-Branches</p>
+</li>
 </ul>
 </div>
 </div>
@@ -799,6 +987,18 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <div class="sect1">
 <h2 id="_planung_und_dokumentation_der_programmierarbeiten"><a class="anchor" href="#_planung_und_dokumentation_der_programmierarbeiten"></a>5. Planung und Dokumentation der Programmierarbeiten</h2>
 <div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Im Rahmen des Projektunterrichts wird versucht nicht einfach drauf los zu coden, sondern zuerst Tasks in einem Scrum Board zu erstellen und diese dann abzuarbeiten. Für jeden Task soll dann ersichtlich sein, welche Commits zu dessen Erfüllung geführt haben
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="_user_stories_und_tasks"><a class="anchor" href="#_user_stories_und_tasks"></a>5.1. User Stories und Tasks</h3>
 <div class="ulist">
@@ -856,7 +1056,7 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <div class="ulist">
 <ul>
 <li>
-<p>Die Änderungen werden automatisch eingetragen, daher sind aussagekräftige Commit-Messages essentiell.</p>
+<p>Die Änderungen werden automatisch eingetragen, daher sind aussagekräftige Commit-Messages essenziell.</p>
 </li>
 </ul>
 </div>
@@ -875,6 +1075,23 @@ Wir verwenden grundsätzlich <a href="https://en.wikipedia.org/wiki/Monorepo" ta
 <ul>
 <li>
 <p>Die Deployments sind grundsätzlich zu automatisieren (scripts und/oder gh-actions)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Beispiele:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine" class="bare" target="_blank" rel="noopener">https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-kurstermine</a></p>
+</li>
+<li>
+<p><a href="https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-franklyn" class="bare" target="_blank" rel="noopener">https://github.com/2324-4bhif-syp/2324-4bhif-syp-project-franklyn</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -933,11 +1150,67 @@ Beim ersten Deployment auf einem Server oder in der Leocloud sind allerdings Sch
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_für_lehrkräfte_git_classroom"><a class="anchor" href="#_für_lehrkräfte_git_classroom"></a>8. Für Lehrkräfte: git-Classroom</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_erstellen_der_repos"><a class="anchor" href="#_erstellen_der_repos"></a>8.1. Erstellen der Repos</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Projekte sollten von der jeweiligen Lehrkraft mittels gh-classroom erstellt werden.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/projekte-gh-classroom.png" alt="projekte gh classroom">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nachdem die Lehrkraft die Rahmenbedingungen festgelegt hat, erstellen die Schüler ihre Projekte.</p>
+</li>
+<li>
+<p>Dies hat den Vorteil, dass die Projekt-Repos der Lehrkraft zugeordnet sind und die Schüler uneingeschränkt Zugriff auf die Repositories haben.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_virtuelle_maschinen"><a class="anchor" href="#_virtuelle_maschinen"></a>8.2. Virtuelle Maschinen</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Möglichkeiten</p>
+<div class="ulist">
+<ul>
+<li>
+<p>oravm</p>
+</li>
+<li>
+<p>vm vom sysadmin</p>
+</li>
+<li>
+<p>leocloud (mandatorisch, spätestens ab 4.jg, 2.Semester)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>IMORTANT: Vor der Matura die Credentials einsammeln und aufbewahren.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0.0<br>
-Last updated 2025-02-22 19:16:16 UTC
+Version 2.0.0<br>
+Last updated 2025-03-01 09:48:03 UTC
 </div>
 </div>
 </body>
