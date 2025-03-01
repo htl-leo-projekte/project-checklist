@@ -359,4 +359,4 @@ image::projekte-gh-classroom.png[]
 ** vm vom sysadmin
 ** leocloud (mandatorisch, spätestens ab 4.jg, 2.Semester)
 
-IMORTANT: Vor der Matura die Credentials einsammeln und aufbewahren.
+IMPORTANT: Vor der Matura die Credentials einsammeln und aufbewahren.
